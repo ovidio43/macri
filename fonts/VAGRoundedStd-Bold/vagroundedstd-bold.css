@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'VAGRoundedStdBold';
+    src: url('vagroundedstd-bold.eot');
+    src: url('vagroundedstd-bold.eot') format('embedded-opentype'),
+         url('vagroundedstd-bold.woff2') format('woff2'),
+         url('vagroundedstd-bold.woff') format('woff'),
+         url('vagroundedstd-bold.ttf') format('truetype'),
+         url('vagroundedstd-bold.svg#VAGRoundedStdBold') format('svg');
+}
