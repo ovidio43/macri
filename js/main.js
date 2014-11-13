@@ -61,6 +61,7 @@ $('input[type="checkbox"].large').checkbox({
 			    $('.loadthanks-friend').bind('click', function(event){
 			    	event.preventDefault();
 			    	$('#overlay-dashboard').removeClass('white').addClass($(this).attr('data-color')+' small-overlay'); 
+			    	$('.small-overlay').height($('.in').height()*2);
 					$('#load-data').load("include/"+$(this).attr('data-src'),function(){  
 						adjustHeight();        
 					        $('.close').bind('click', function(){
