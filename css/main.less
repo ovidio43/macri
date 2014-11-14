@@ -1019,10 +1019,35 @@ h1, .h1{
 	.fb-options{
 		list-style: none;
 		display: block;
+		padding: 0;
+		margin: 0 -20px;
 		li{
 			padding: 25px 0 25px 200px;
 			display: block;
 			position: relative;
+			cursor: pointer;
+			.transition();			
+			&:hover{
+				background-color: #fff;
+				.bf-action{
+					color: #1e51a4;
+				}
+				.pts{
+					color: #1e51a4;
+				}
+				.share{
+					background-position: -233px -194px;
+				}
+				.fb{
+					background-position:-165px -194px;
+				}
+				.like{
+					background-position:  0 -194px;
+				}
+				.dona-fb{
+					background-position: -86px -194px;
+				}				
+			}			
 		}
 	}
 	.entry-fb{
@@ -1039,12 +1064,12 @@ h1, .h1{
 		}
 	}
 	.icon{
-		background-image: url('../img/sprite-tw-fb.png');
+		background-image: url('../img/sprite-tw-fb.png?v=2');
 		width: 70px;
 		height: 60px;
 		display: block;
 		position: absolute;
-		left: 0;
+		left: 50px;
 		top: 0;
 		bottom: 0;
 		margin: auto 0;
@@ -1425,6 +1450,9 @@ h1, .h1{
 		.col-sm-4{
 			width: 50%;
 		}
+	}
+	.wrap-facebook .icon{
+		left: 20px;
 	}
 	.wrap-modera .wrap-filter .icon-filter{
 		margin: 0 3px;
