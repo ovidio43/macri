@@ -23,7 +23,7 @@
     $(".fancy-login").fancybox({
         maxWidth    : 800,
         maxHeight   : 600,
-        fitToView   : false,
+        fitToView   : true,
         autoSize    : true,
         closeClick  : false,
         closeBtn : false,

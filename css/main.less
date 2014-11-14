@@ -67,6 +67,7 @@ h1, .h1{
 		opacity: 1;
 	}
 }
+
 .btn-blue{
 	background-color: #24b3da;
 	color: #fff;
@@ -78,7 +79,62 @@ h1, .h1{
 		color: #24b3da;
 		border: 3px solid #24b3da;
 		opacity: 1;
+		.icon-twitter{
+			background-position: -450px 0;
+		}
 	}
+	&.twitter{
+		padding: 10px 0 10px 95px;
+		white-space: normal;
+		line-height: 1em;
+		text-align: left; 
+		position: relative;
+		.icon-twitter{
+			position: absolute;
+			left: 8px;
+			bottom: 8px;
+		}
+	}	
+}
+.btn-blue2{
+	background-color: #1263e8;
+	color: #fff;
+	font-size: 30px;
+	font-family: 'VAGRoundedStdBold';
+	border: 3px solid #1263e8;
+	&:hover{
+		background-color: #fff;
+		color: #1263e8;
+		border: 3px solid #1263e8;
+		opacity: 1;
+		.icon-facebook{
+			background-position: -402px 0;
+		}
+	}
+	&.facebook{
+		padding: 10px 0 10px 80px;
+		white-space: normal;
+		line-height: 1em;
+		text-align: left; 
+		position: relative;
+		.icon-facebook{
+			position: absolute;
+			left: 20px;
+			bottom: -3px;
+		}
+	}
+}
+.icon-facebook{
+	background-image: url('../img/sprite.png');
+	background-position: 0 0;
+	width: 30px;
+	height: 60px;
+}
+.icon-twitter{
+	background-image: url('../img/sprite.png');
+	background-position: -48px 0;
+	width: 81px;
+	height: 60px;
 }
 .btn-orange{
 	background-color: #f07622;
@@ -271,7 +327,7 @@ h1, .h1{
 		    background-position: -540px 0;
 		}
 		.icon-dash.moderar {
-		    background-position: 402px -68px;
+		    background-position: 397px -68px;
 		}
 		.icon-dash.perfil {
 		    background-position: -683px 0;
@@ -397,9 +453,7 @@ h1, .h1{
 	    	border: 5px solid #55acee;
 	    	color: #55acee;
 	    }
-	    &.blue_white:active{
-	    	border: 5px solid #3c3c3c;
-	    }	    
+
 	    &.blue:hover{
 	    	border: 5px solid #1e51a4;
 	    	color: #1e51a4;
@@ -738,6 +792,7 @@ h1, .h1{
 			font-family: 'VAGRoundedStdBold';
 			color: #3b3b3b;
 			display: block;
+			margin: 0;
 			.transition();
 			&:hover{
 				background-color: #f2f2f2;
@@ -1203,6 +1258,12 @@ h1, .h1{
 	.wrap-modera .wrap-filter .next{
 		margin: 0 0 0 10px;
 	}
+	.btn-blue2{
+		font-size: 20px;
+	}
+	.btn-blue{
+		font-size: 20px;
+	}	
 }
 @media (max-width:865px){
 	.wrap-modera .wrap-filter .icon-filter{
@@ -1216,6 +1277,12 @@ h1, .h1{
 	}
 }
 @media (max-width:820px){
+	.btn-blue2{
+		font-size: 30px;
+	}
+	.btn-blue{
+		font-size: 30px;
+	}		
 	.wrap-modera .wrap-filter .icon-filter{
 		margin: 0 20px;
 	}
@@ -1236,10 +1303,8 @@ h1, .h1{
 	border-top: 0;
 	box-shadow: none;
 	max-height: none;
-
 	}
 	.navbar-collapse.collapse {
-
 	z-index: 10;
 	margin-top: 48px;
 	}
@@ -1269,6 +1334,9 @@ h1, .h1{
 		&:hover{
 			background-color: transparent;
 		}
+		&:focus{
+			background-color: transparent;
+		}
 	}
 	.navbar-toggle .icon-bar{
 		height: 3px;
@@ -1293,7 +1361,16 @@ h1, .h1{
 	    margin-right: 0;
 	}
 }
+@media (max-width:768px){
+	.btn-blue2{
+		max-width: 330px;
+	}
+	.btn-blue{
+		max-width: 330px;
+	}		
+}
 @media (max-width:645px){
+	
 	.wrap-modera .wrap-filter .icon-filter{
 		margin: 0 3px;
 	}
@@ -1389,8 +1466,24 @@ h1, .h1{
 	.login_form h1{
 		font-size: 30px;
 	}
+	.navbar{
+		max-width: initial;
+		width: 100%;
+	}
+	.wrap-facebook .fb-options li{
+		padding: 25px 0 25px 110px;
+	}
+	.login_form{
+		width: 100%;
+	}
 }
 @media (max-width:400px){
+	.form-group .btn-blue{
+		font-size: 25px;
+	}	
+	.form-group .btn-blue2{
+		font-size: 25px;
+	}
 	.wrap-modera .wrap-filter .prev{
 		padding: 6px 0px 0;
 		width: 65px;
