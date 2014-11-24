@@ -1,28 +1,29 @@
 function adjustHeight(){
 	var dashHeight = $('.dashboard').height();
 	var overlayHeight = $('#load-data').height();
-	
+	//alert("fondo: "+dashHeight+" encima: "+ overlayHeight);
 	if(overlayHeight >dashHeight){
 		$('.dashboard').height(overlayHeight);
+		$('#overlay-dashboard').height(overlayHeight);
 	}else{
-		$('.dashboard').height(dashHeight);
+		$('.dashboard').height(overlayHeight);
+		$('#overlay-dashboard').height(overlayHeight);
 	}
 }
 function loadAfterAjax(){
-
 	/* oculta muestra detalle de twitter*/
 	$('.select-options li').bind('click', function(){
 		$('.select-options li').removeClass('active-tweet');
 		$(this).addClass('active-tweet');
 		$('.load-tweet').load("include/"+$(this).attr('data-src'),function(){  
-			adjustHeight();        
+			adjustHeight();
 			$('.load-thank').bind('click', function(event){
 				event.preventDefault();
 				$('.load-tweet').load("include/"+$(this).attr('data-src'),function(){   
 				adjustHeight();       
-				});			
+				});
 			});
-		});			
+		});
 	});
 
 	/* carga script despues de load ajax*/
@@ -65,7 +66,7 @@ $(document).ready(function(){
     	$('.alert').css('display','none');
     });    
     jQuery(window).resize(function() {
-    	adjustHeight();
+    	//adjustHeight();
     });    
 
 	$('.fancy-resize').trigger('click');

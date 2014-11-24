@@ -294,10 +294,21 @@ h1, .h1{
 		width: 100%;
 		font-size: 20px;
 		font-family: 'VAGRoundedStdLight';
+		 h1{
+			padding: 0;
+			text-align: center;
+			span{
+				display: inline-block;
+				position: relative;
+				padding: 0 0 0 70px;
+			}
+		}
 		.wrap-btn{
 			text-align: center;
 			.btn-blue{
 				width: 50%;
+				max-width: 280px;
+				padding: 7px 0;
 			}
 		}
 	}
@@ -438,6 +449,7 @@ h1, .h1{
 		position: relative;
 		float: left;
 		width: 100%;
+		overflow: hidden;
 	}
 	.in{
 	    font-size: 24px;
@@ -509,7 +521,23 @@ h1, .h1{
 	position: absolute;
 	left: 0;
 	top: 0;
-	background-color: #18191b;
+	background-color: #28292b;
+	&.navbar{
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;		
+	}
+	.navbar-collapse.collapse{
+		position: fixed;
+		left: 0;
+		width: 300px;
+		top: 41px;
+		z-index: 10;
+		background-color: #28292b;
+		.nav-left{
+			background-color: #18191b;
+		}
+	}
 }
 .navbar-collapse.collapse{
 	background-color: #18191b;	
@@ -538,6 +566,7 @@ h1, .h1{
 		font-size: 19px;
 		color: #4c4c4c;
 		text-align: center;
+		background-color: #18191b;
 		padding: 25px 0;
 		float: left;
 		width: 100%;
@@ -713,6 +742,7 @@ h1, .h1{
 	font-size: 18px;
 	padding: 20px;
 	color:#fff;
+	overflow: hidden;
 	h1{
 		font-size: 36px;
 		font-family: 'VAGRoundedStdBlack';
@@ -1262,7 +1292,7 @@ h1, .h1{
 		font-size: 20px;
 	}
 	.btn-blue{
-		font-size: 20px;
+		
 	}	
 }
 @media (max-width:865px){
@@ -1280,6 +1310,7 @@ h1, .h1{
 	.btn-blue2{
 		font-size: 30px;
 	}
+
 	.btn-blue{
 		font-size: 30px;
 	}		
@@ -1314,10 +1345,20 @@ h1, .h1{
 	}
 	.mobile-nav{
 	display: block;
-    background: none repeat scroll 0 0 #18191b;
+    background: #28292b;
     height: 48px;
     width: 100%;		
 	}	
+	.wrap-sidebar .navbar-collapse.collapse{
+		position: absolute;
+		top: 0;
+	}
+	.navbar-collapse.collapse{
+		display: none!important;
+		&.in{
+			display: block!important;
+		}
+	}
 	.navbar-toggle{
 		position: absolute;
 		top: 0;
@@ -1361,14 +1402,19 @@ h1, .h1{
 	    margin-right: 0;
 	}
 }
-@media (max-width:768px){
+
+@media(max-width:769px){
 	.btn-blue2{
 		max-width: 330px;
 	}
 	.btn-blue{
 		max-width: 330px;
-	}		
+	}
+	.wrap-dashboard .in{
+		font-size: 20px;
+	}
 }
+
 @media (max-width:645px){
 	
 	.wrap-modera .wrap-filter .icon-filter{
