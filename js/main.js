@@ -46,7 +46,12 @@ function loadAfterAjax(){
 		});	    	
     }); 		
 }
+function heghtBanner(){
+	var h=$(window).height();
+	$('.height-banner').height(h);
+}
 $(document).ready(function(){
+	heghtBanner();
     var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
     $('.in').bind('click', function(){
     	$('#overlay-dashboard').attr('class','');
@@ -67,6 +72,7 @@ $(document).ready(function(){
     });    
     jQuery(window).resize(function() {
     	//adjustHeight();
+    	heghtBanner();
     });    
 
 	$('.fancy-resize').trigger('click');
