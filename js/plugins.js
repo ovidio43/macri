@@ -19,7 +19,7 @@
             console[method] = noop;
         }
     }
-    
+    $(".nano").nanoScroller({});
     $(".fancy-login").fancybox({
         maxWidth    : 800,
         maxHeight   : 600,

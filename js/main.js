@@ -46,12 +46,13 @@ function loadAfterAjax(){
 		});	    	
     }); 		
 }
-function heghtBanner(){
+function heightBanner(){
 	var h=$(window).height();
 	$('.height-banner').height(h);
+	$('.nano').attr('style','height:'+(h-41)+'px!important');
 }
 $(document).ready(function(){
-	heghtBanner();
+	heightBanner();
     var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
     $('.in').bind('click', function(){
     	$('#overlay-dashboard').attr('class','');
@@ -72,7 +73,7 @@ $(document).ready(function(){
     });    
     jQuery(window).resize(function() {
     	//adjustHeight();
-    	heghtBanner();
+    	heightBanner();
     });    
 
 	$('.fancy-resize').trigger('click');

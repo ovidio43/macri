@@ -531,6 +531,15 @@ h1, .h1{
 		-moz-border-radius: 0px;
 		border-radius: 0px;		
 	}
+	.navbar-collapse{
+		&.nano{
+			max-height: initial;
+			overflow: hidden!important;
+		}
+		.nano-content{
+			right: 0!important;
+		}
+	}
 	.navbar-collapse.collapse{
 		position: fixed;
 		left: 0;
@@ -1442,6 +1451,76 @@ h1, .h1{
 	.wrap-dashboard .in{
 		font-size: 20px;
 	}
+	.icon-dash{
+		background-image: url("../img/sprite-mobile.png");
+		height: 47px;
+		margin: 0 0 15px;
+		&.facebook{
+			background-position: 0 0;
+			width: 28px;
+		}
+		&.twitter{
+			background-position: -37px 0;
+			width: 60px;
+		}
+		&.plus{
+			background-position: -161px 0;
+			width: 46px;
+		}
+		&.dona{
+			background-position: -103px 0;
+			width: 53px;
+		}
+		&.moderar{
+			background-position: 0 -54px;
+			width: 64px;
+		}
+		&.perfil{
+			background-position: -211px 0;
+			width: 44px;
+		}
+		&.product{
+			background-position: -69px -52px;
+			width: 67px;
+			height: 55px;
+		}
+		&.more{
+			background-position: -558px 0;
+			width:44px;
+		}
+	}	
+	.in {
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    cursor: pointer;
+	    &:hover{
+	    	.transition();
+	    	.icon-dash.facebook{
+	    		background-position: -301px 0;
+	    	}
+			.icon-dash.twitter {
+			    background-position: -338px 0;
+			}   
+			.icon-dash.plus {
+			    background-position: -462px 0;
+			}
+			.icon-dash.dona {
+			    background-position: -407px 0;
+			}
+			.icon-dash.moderar {
+			    background-position: -303px -54px;
+			}
+			.icon-dash.perfil {
+			    background-position: -512px 0;
+			}
+			.icon-dash.product {
+			    background-position: -370px -52px;
+			}		
+	    }
+	}	
 }
 
 @media (max-width:645px){
